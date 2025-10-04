@@ -118,7 +118,7 @@ const tweet = async (newImage) => {
 
     // Send tweet with media
     const { data } = await twitterClient.v2.tweet({
-      text: `${#Bible} ${#Bibleverses} ${#Faith} ${#Christianity}`,
+      text: `${"#Bible"} ${"#Bibleverses"} ${"#Faith"} ${"#Christianity"}`,
       media: { media_ids: [mediaID] },
     });
 
