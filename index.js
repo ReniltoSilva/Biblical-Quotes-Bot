@@ -9,7 +9,7 @@ const { default: axios } = require("axios");
 
 //-----Pull random quote and call generateImage()
 const randomQuote = () => {
-  const url = "https://bible-api.com//data/bbe/random";
+  const url = "https://bible-api.com//data/bbe/random/NT";
 
   axios
     .get(url)
