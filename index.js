@@ -9,14 +9,15 @@ const { default: axios } = require("axios");
 
 //-----Pull random quote and call generateImage()
 const randomQuote = () => {
-  const url = "https://bible-api.com//data/web/random";
+  const url = "https://bible-api.com//data/bbe/random";
 
   axios
     .get(url)
     .then((res) => {
-      const text = `${res.data.random_verse.text} - ${res.data.random_verse.book} ${res.data.random_verse.chapter}:${res.data.random_verse.verse}`;
-      generateImage(text.replace(/\r?\n|\r/g, ""));
+      // const text = `${res.data.random_verse.text} - ${res.data.random_verse.book} ${res.data.random_verse.chapter}:${res.data.random_verse.verse}`;
+      // generateImage(text.replace(/\r?\n|\r/g, ""));
       // console.log(text.replace(/\r?\n|\r/g, ""));
+      console.log(res.data);
     })
     .catch((error) => {
       console.error("Error fetching data", error);
