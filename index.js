@@ -14,10 +14,9 @@ const randomQuote = () => {
   axios
     .get(url)
     .then((res) => {
-      // const text = `${res.data.random_verse.text} - ${res.data.random_verse.book} ${res.data.random_verse.chapter}:${res.data.random_verse.verse}`;
+      const text = `${res.data.random_verse.text} - ${res.data.random_verse.book} ${res.data.random_verse.chapter}:${res.data.random_verse.verse}`;
       // generateImage(text.replace(/\r?\n|\r/g, ""));
-      // console.log(text.replace(/\r?\n|\r/g, ""));
-      console.log(res.data);
+      console.log(text.replace(/\r?\n|\r/g, ""));
     })
     .catch((error) => {
       console.error("Error fetching data", error);
