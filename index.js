@@ -12,7 +12,7 @@ const randomQuote = () => {
   // const url = "https://bible-api.com//data/web/random";
 
   axios
-    .get(process.env.BIBLE_API_KEY)
+    .get(process.env.BIBLE_API_URL)
     .then((res) => {
       const text = `${res.data.random_verse.text} - ${res.data.random_verse.book} ${res.data.random_verse.chapter}:${res.data.random_verse.verse}`;
       generateImage(text.replace(/\r?\n|\r/g, ""));
