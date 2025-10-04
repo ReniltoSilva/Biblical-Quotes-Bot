@@ -20,7 +20,7 @@ const randomQuote = () => {
     });
 };
 
-// randomQuote();
+randomQuote();
 
 // Helper function to wrap text
 function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
@@ -65,7 +65,7 @@ function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
 //-----Generate img with text, save it and call tweet()
 async function generateImage(text) {
   const image = await loadImage(
-    `./image/image${Math.trunc(Math.random() * 32)}.png`
+    `./images/image${Math.trunc(Math.random() * 32)}.png`
   );
   console.log(image);
   const targetWidth = 570;
@@ -92,7 +92,7 @@ async function generateImage(text) {
   const buffer = canvas.toBuffer("image/png");
   let newImage = `./${Math.random().toFixed(3)}.png`;
   fs.writeFileSync(`${newImage}`, buffer);
-  // tweet(newImage);
+  tweet(newImage);
 
   return buffer;
 }
