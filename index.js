@@ -1,4 +1,7 @@
-require("dotenv").config({ path: __dirname + "/.env" });
+// require("dotenv").config({ path: __dirname + "/.env" });
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
 const { createCanvas, loadImage } = require("canvas");
 const { twitterClient } = require("./twitterClient");
 const fs = require("fs");
@@ -6,10 +9,10 @@ const { default: axios } = require("axios");
 
 //-----Pull random quote and call generateImage()
 const randomQuote = () => {
-  const url = "https://bible-api.com//data/web/random";
+  // const url = "https://bible-api.com//data/web/random";
 
   axios
-    .get(url)
+    .get(process.env.BIBLE_API_KEY)
     .then((res) => {
       const text = `${res.data.random_verse.text} - ${res.data.random_verse.book} ${res.data.random_verse.chapter}:${res.data.random_verse.verse}`;
       generateImage(text.replace(/\r?\n|\r/g, ""));
