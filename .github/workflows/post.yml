@@ -2,10 +2,10 @@ name: Bible Meme Bot
 
 on:
   schedule:
-    - cron: "0 1 * * *" # 08:00 Bangkok (UTC 01:00)
-    - cron: "0 5 * * *" # 12:00 Bangkok (UTC 05:00)
-    - cron: "0 9 * * *" # 16:00 Bangkok (UTC 09:00)
-    - cron: "0 13 * * *" # 20:00 Bangkok (UTC 13:00)
+    - cron: "0 6 * * *" # 08:00 Bangkok (UTC 01:00)
+    - cron: "0 12 * * *" # 12:00 Bangkok (UTC 05:00)
+    - cron: "0 16 * * *" # 16:00 Bangkok (UTC 09:00)
+    - cron: "0 20 * * *" # 20:00 Bangkok (UTC 13:00)
   workflow_dispatch: # lets you trigger it manually from GitHub UI
 
 jobs:

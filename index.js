@@ -15,8 +15,8 @@ const randomQuote = () => {
     .get(url)
     .then((res) => {
       const text = `${res.data.random_verse.text} - ${res.data.random_verse.book} ${res.data.random_verse.chapter}:${res.data.random_verse.verse}`;
-      // generateImage(text.replace(/\r?\n|\r/g, ""));
-      console.log(text.replace(/\r?\n|\r/g, ""));
+      generateImage(text.replace(/\r?\n|\r/g, ""));
+      //console.log(text.replace(/\r?\n|\r/g, ""));
     })
     .catch((error) => {
       console.error("Error fetching data", error);
@@ -118,7 +118,7 @@ const tweet = async (newImage) => {
 
     // Send tweet with media
     const { data } = await twitterClient.v2.tweet({
-      text: "",
+      text: `${"#Bible"} ${"#Bibleverses"} ${"#Faith"} ${"#Christianity"}`,
       media: { media_ids: [mediaID] },
     });
 
