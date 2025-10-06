@@ -1,10 +1,10 @@
-📖 Biblical Quotes Bot
+# 📖 Biblical Quotes Bot
 
 A fully automated Twitter bot that posts random Bible verses on beautiful nature backgrounds — completely serverless.
 
-🌿 How It Works
+## 🌿 How It Works
 
-Every few hours, the bot:
+**Every few hours, the bot:**
 
 Fetches a random Bible verse from a public API.
 
@@ -17,7 +17,7 @@ Posts it automatically to X (Twitter) with relevant hashtags like
 
 All posts are fully automated — no human input, no server to manage.
 
-⚙️ Tech Stack
+## ⚙️ Tech Stack
 
 Node.js – main runtime for the bot
 
@@ -27,9 +27,9 @@ Bible API – for fetching random verses
 
 GitHub Actions – used as a free serverless scheduler (posts 4x per day)
 
-🧠 What I Learned
+## 🧠 What I Learned
 
-This project helped me:
+**This project helped me:**
 
 Understand how APIs interact in real projects.
 
@@ -39,7 +39,7 @@ Practice working with environment variables to keep tokens safe.
 
 Explore backend automation and task scheduling with Node.js.
 
-🕒 Posting Schedule
+## 🕒 Posting Schedule
 
 The bot posts 4 times per day, automatically, using GitHub Actions cron jobs:
 
@@ -51,11 +51,11 @@ The bot posts 4 times per day, automatically, using GitHub Actions cron jobs:
 
 20:00 (Bangkok time, UTC+7)
 
-🔐 Environment Variables
+## 🔐 Environment Variables
 
 To keep credentials safe, all sensitive values (like API keys) are stored in GitHub Secrets, not in the public code.
 
-Example of required environment variables:
+**Example of required environment variables:**
 
 TWITTER_API_KEY
 TWITTER_API_SECRET
@@ -67,9 +67,9 @@ BIBLE_API_URL
 
 Never hard-code these values in your files.
 
-🚀 How to Run Locally (optional)
+## 🚀 How to Run Locally (optional)
 
-If you want to run your own version:
+**If you want to run your own version:**
 
 Clone the repo
 
@@ -79,7 +79,7 @@ Create a .env file with your own API keys (same names as above)
 
 Run node index.js
 
-🙌 Credits
+## 🙌 Credits
 
 Bible API
  – for the verses
@@ -89,13 +89,13 @@ twitter-api-v2
 
 Nature images are locally stored (no external licensing issues).
 
-💬 Connect
+## 💬 Connect
 
 Built by @ReniltoSilva
 
 If you like this project, feel free to give it a ⭐ on GitHub!
 
-✅ License
+## ✅ License
 
 This project is open-source under the MIT License
 .
